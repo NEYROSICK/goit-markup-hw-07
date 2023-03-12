@@ -37,7 +37,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--clr-primary);
   background-color: var(--clr-background-primary);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 p,
@@ -1119,6 +1119,7 @@ a {
 .modal-backdrop {
   visibility: hidden;
   opacity: 0;
+  overflow-y: scroll;
   pointer-events: none;
   transform: scale(1.5);
   display: flex;
@@ -1147,7 +1148,6 @@ a {
   visibility: visible;
   pointer-events: all;
   transform: scale(1);
-  overflow-y: scroll;
 }
 
 .modal-open {
