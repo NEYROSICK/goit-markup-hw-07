@@ -37,6 +37,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--clr-primary);
   background-color: var(--clr-background-primary);
+  /* overflow-x: hidden; */
 }
 
 p,
@@ -57,6 +58,9 @@ ul {
 
 img {
   display: block;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 a {
@@ -96,8 +100,10 @@ a {
 /* Header section elements */
 
 .header {
-  border-bottom: 1px solid var(--clr-primary-inverted);
   height: 70px;
+  border-bottom: 1px solid var(--clr-primary-inverted);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -760,7 +766,13 @@ a {
 
 .footer {
   background-color: var(--clr-background-primary-dark);
-  padding: 100px 0;
+  padding: 96px 0;
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .footer-container {
@@ -773,11 +785,6 @@ a {
 @media (min-width: 768px) {
   .footer-container {
     justify-content: left;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer-container {
     width: 582px;
   }
 }
@@ -867,13 +874,13 @@ a {
 .email-form {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
   flex-wrap: wrap;
   row-gap: 16px;
 }
 
 @media (min-width: 768px) {
   .email-form {
+    align-items: flex-end;
     flex-wrap: nowrap;
     column-gap: 24px;
   }
@@ -950,15 +957,41 @@ a {
 /* Portfolio section elements */
 
 .portfolio-section {
-  padding-top: 96px;
+  padding: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .portfolio-section {
+    padding: 64px 0 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-section {
+    padding: 100px 0 120px;
+  }
 }
 
 .portfolio-filter {
   display: flex;
-  justify-content: center;
   gap: 24px;
-  margin-bottom: 76px;
+  margin-bottom: 48px;
   flex-wrap: wrap;
+  max-width: 263px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-filter {
+    justify-content: center;
+    margin-bottom: 64px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-filter {
+    margin-bottom: 72px;
+  }
 }
 
 .filter-button {
@@ -971,11 +1004,17 @@ a {
   border: 1px solid var(--clr-primary-inverted);
   border-radius: 4px;
   cursor: pointer;
-  padding: 12px 24px;
+  padding: 8px 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .filter-button {
+    padding: 12px 24px;
+  }
 }
 
 .filter-button:hover,
@@ -989,13 +1028,38 @@ a {
 
 .portfolio-list {
   display: flex;
-  gap: 24px;
+  row-gap: 48px;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .portfolio-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-list {
+    row-gap: 48px;
+    justify-content: center;
+  }
 }
 
 .portfolio-card {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .portfolio-card {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-card {
+    flex-basis: calc((100% - 48px) / 3);
+  }
 }
 
 .portfolio-link {
@@ -1008,26 +1072,35 @@ a {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-image {
+.portfolio-image-container {
   position: relative;
   overflow: hidden;
-  height: 300px;
+}
+
+.porfolio-image {
+  max-height: 280px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .portfolio-image {
+    max-height: 300px;
+  }
 }
 
 .portfolio-description {
   position: absolute;
-  top: 0;
+  top: 100%;
   height: 100%;
   padding: 40px 32px 0 32px;
   background-color: var(--clr-brand);
   color: var(--clr-brand-inverted);
-  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover .portfolio-description,
 .portfolio-link:focus .portfolio-description {
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
 
 .card-text {

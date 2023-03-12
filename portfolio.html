@@ -17,7 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -26,13 +26,13 @@
         <div class="header-container-desktop">
           <nav class="header-nav">
             <div class="logo-container">
-              <a class="logo" href="../index.html">
+              <a class="logo" href="./index.html">
                 <span class="logo-decoration">Web</span>Studio
               </a>
             </div>
             <ul class="header-menu">
               <li>
-                <a class="header-link nav-link" href="../index.html">Studio </a>
+                <a class="header-link nav-link" href="./index.html">Studio </a>
               </li>
               <li>
                 <a
@@ -43,7 +43,9 @@
                 </a>
               </li>
               <li>
-                <a class="header-link nav-link" href="">Contacts</a>
+                <a class="header-link nav-link" href="#" onclick="return false;"
+                  >Contacts</a
+                >
               </li>
             </ul>
           </nav>
@@ -66,7 +68,7 @@
         </div>
         <nav class="header-container-mobile">
           <div class="logo-container">
-            <a class="logo" href="../index.html">
+            <a class="logo" href="./index.html">
               <span class="logo-decoration">Web</span>Studio
             </a>
           </div>
@@ -77,20 +79,18 @@
             aria-controls="mobile-menu"
           >
             <svg class="burger-icon">
-              <use href="../images/icons.svg#icon-menu-burger"></use>
+              <use href="./images/icons.svg#icon-menu-burger"></use>
             </svg>
           </button>
           <div class="burger-menu js-menu-container" id="mobile-menu">
             <button class="menu-close js-close-menu" type="button">
               <svg class="modal-icon">
-                <use href="../images/icons.svg#icon-close-black"></use>
+                <use href="./images/icons.svg#icon-close-black"></use>
               </svg>
             </button>
             <ul class="header-menu burger-menu-links">
               <li>
-                <a
-                  class="header-link nav-link mobile-title"
-                  href="../index.html"
+                <a class="header-link nav-link mobile-title" href="./index.html"
                   >Studio
                 </a>
               </li>
@@ -103,7 +103,10 @@
                 </a>
               </li>
               <li>
-                <a class="header-link nav-link mobile-title" href=""
+                <a
+                  class="header-link nav-link mobile-title"
+                  href="#"
+                  onclick="return false;"
                   >Contacts</a
                 >
               </li>
@@ -128,30 +131,30 @@
             </address>
             <ul class="socials-list">
               <li class="socials-item">
-                <a class="socials-link" href="#">
+                <a class="socials-link" href="#" onclick="return false;">
                   <svg class="socials-icon burger-socials-icon">
-                    <use href="../images/icons.svg#icon-instagram"></use>
+                    <use href="./images/icons.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-item">
-                <a class="socials-link" href="#">
+                <a class="socials-link" href="#" onclick="return false;">
                   <svg class="socials-icon burger-socials-icon">
-                    <use href="../images/icons.svg#icon-twitter"></use>
+                    <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-item">
-                <a class="socials-link" href="#">
+                <a class="socials-link" href="#" onclick="return false;">
                   <svg class="socials-icon burger-socials-icon">
-                    <use href="../images/icons.svg#icon-facebook"></use>
+                    <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials-item">
-                <a class="socials-link" href="#">
+                <a class="socials-link" href="#" onclick="return false;">
                   <svg class="socials-icon burger-socials-icon">
-                    <use href="../images/icons.svg#icon-linkedin"></use>
+                    <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
                 </a>
               </li>
@@ -183,10 +186,15 @@
           </ul>
           <ul class="portfolio-list">
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/banking-app-interface.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/banking-app-interface.jpg    1x,
+                      ./images/banking-app-interface@2x.jpg 2x
+                    "
+                    src="./images/banking-app-interface.jpg"
                     width="360"
                     alt="Banking App Interface Concept"
                   />
@@ -207,10 +215,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/cashless-payment.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/cashless-payment.jpg    1x,
+                      ./images/cashless-payment@2x.jpg 2x
+                    "
+                    src="./images/cashless-payment.jpg"
                     width="360"
                     alt="Cashless Payment"
                   />
@@ -229,10 +242,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/meditation-app.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/meditation-app.jpg    1x,
+                      ./images/meditation-app@2x.jpg 2x
+                    "
+                    src="./images/meditation-app.jpg"
                     width="360"
                     alt="Meditaion App"
                   />
@@ -251,10 +269,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/taxi-service.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/taxi-service.jpg    1x,
+                      ./images/taxi-service@2x.jpg 2x
+                    "
+                    src="./images/taxi-service.jpg"
                     width="360"
                     alt="Taxi Service"
                   />
@@ -273,10 +296,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/screen-illustrations.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/screen-illustrations.jpg    1x,
+                      ./images/screen-illustrations@2x.jpg 2x
+                    "
+                    src="./images/screen-illustrations.jpg"
                     width="360"
                     alt="Screen Illustrations"
                   />
@@ -295,10 +323,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/online-courses.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/online-courses.jpg    1x,
+                      ./images/online-courses@2x.jpg 2x
+                    "
+                    src="./images/online-courses.jpg"
                     width="360"
                     alt="Online Courses"
                   />
@@ -317,10 +350,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/inst-stories-concept.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/inst-stories-concept.jpg    1x,
+                      ./images/inst-stories-concept@2x.jpg 2x
+                    "
+                    src="./images/inst-stories-concept.jpg"
                     width="360"
                     alt="Instagram Stories Concept"
                   />
@@ -339,10 +377,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/organic-food.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/organic-food.jpg    1x,
+                      ./images/organic-food@2x.jpg 2x
+                    "
+                    src="./images/organic-food.jpg"
                     width="360"
                     alt="Organic Food"
                   />
@@ -361,10 +404,15 @@
               </a>
             </li>
             <li class="portfolio-card">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-image">
+              <a class="portfolio-link" href="#" onclick="return false;">
+                <div class="portfolio-image-container">
                   <img
-                    src="../images/fresh-coffee.jpg"
+                    class="porfolio-image"
+                    srcset="
+                      ./images/fresh-coffee.jpg    1x,
+                      ./images/fresh-coffee@2x.jpg 2x
+                    "
+                    src="./images/fresh-coffee.jpg"
                     width="360"
                     alt="Fresh Coffee"
                   />
@@ -389,7 +437,7 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="info-container">
-          <a class="logo footer-logo footer-title" href="../index.html">
+          <a class="logo footer-logo footer-title" href="./index.html">
             <span class="logo-decoration">Web</span>Studio
           </a>
           <p class="footer-text">
@@ -401,30 +449,46 @@
           <p class="footer-title footer-highlight">Social media</p>
           <ul class="socials-list footer-list">
             <li class="socials-item">
-              <a class="socials-link footer-link" href="#">
+              <a
+                class="socials-link footer-link"
+                href="#"
+                onclick="return false;"
+              >
                 <svg class="socials-icon footer-icon">
-                  <use href="../images/icons.svg#icon-instagram"></use>
+                  <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-link footer-link" href="#">
+              <a
+                class="socials-link footer-link"
+                href="#"
+                onclick="return false;"
+              >
                 <svg class="socials-icon footer-icon">
-                  <use href="../images/icons.svg#icon-twitter"></use>
+                  <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-link footer-link" href="#">
+              <a
+                class="socials-link footer-link"
+                href="#"
+                onclick="return false;"
+              >
                 <svg class="socials-icon footer-icon">
-                  <use href="../images/icons.svg#icon-facebook"></use>
+                  <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-item">
-              <a class="socials-link footer-link" href="#">
+              <a
+                class="socials-link footer-link"
+                href="#"
+                onclick="return false;"
+              >
                 <svg class="socials-icon footer-icon">
-                  <use href="../images/icons.svg#icon-linkedin"></use>
+                  <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -449,13 +513,13 @@
             <button class="footer-button footer-highlight" type="submit">
               <span>Subscribe</span>
               <svg class="footer-icon submit-icon">
-                <use href="../images/icons.svg#icon-paper-plane"></use>
+                <use href="./images/icons.svg#icon-paper-plane"></use>
               </svg>
             </button>
           </form>
         </div>
       </div>
     </footer>
-    <script src="../js/mobile-menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
