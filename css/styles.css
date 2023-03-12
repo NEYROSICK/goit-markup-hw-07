@@ -102,8 +102,7 @@ a {
 .header {
   height: 70px;
   border-bottom: 1px solid var(--clr-primary-inverted);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .header-container {
@@ -1065,6 +1064,7 @@ a {
 .portfolio-link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: rgb(0 0 0 / 6%) 0px 1px 4px;
 }
 
 .portfolio-link:hover {
