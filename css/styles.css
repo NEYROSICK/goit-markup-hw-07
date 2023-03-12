@@ -65,6 +65,11 @@ a {
   color: inherit;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -305,12 +310,11 @@ a {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100%;
   height: 100%;
   padding: 60px 40px 40px;
   background-color: var(--clr-background-primary);
-  transform: translateX(100%);
   transition: transform 500ms ease-in-out;
   overflow: auto;
 }
@@ -322,7 +326,7 @@ a {
 }
 
 .burger-menu.is-open {
-  transform: translateX(0);
+  transform: translateX(-100%);
 }
 
 .menu-close {
@@ -397,6 +401,12 @@ a {
   padding: 96px 0;
 }
 
+.section,
+.header,
+.footer {
+  width: 100vw;
+}
+
 @media (min-width: 1200px) {
   .section {
     padding: 120px 0;
@@ -425,6 +435,7 @@ a {
 /* Hero section elements */
 
 .hero-section {
+  width: 100vw;
   background-color: var(--clr-background-primary-dark);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -432,10 +443,23 @@ a {
     ),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
+  background-position: -8px center;
   background-position: center;
   background-size: cover;
   padding: 112px 0;
   text-align: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1020,9 +1044,13 @@ a {
 /* Modal elements */
 
 .modal-backdrop {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -1035,6 +1063,20 @@ a {
     transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-height: 614px) {
+  .modal-backdrop {
+    align-items: center;
+  }
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+  overflow-y: scroll;
+}
+
 .modal-open {
   overflow: hidden;
 }
@@ -1042,16 +1084,13 @@ a {
 .modal {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 408px;
-  max-height: 584px;
+  min-height: 584px;
   padding: 72px 24px 24px;
   background-color: var(--clr-modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: scale(1);
-  overflow: auto;
 }
 
 .modal-close {
@@ -1198,11 +1237,4 @@ a {
   padding: 16px 32px;
   text-align: center;
   margin: 0 auto;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: scale(1.5);
 }
