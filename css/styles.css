@@ -200,16 +200,12 @@ a {
 }
 
 .nav-link {
+  position: relative;
   font-weight: 500;
   color: var(--clr-secondary);
 }
 
-.active-link {
-  position: relative;
-  color: var(--clr-brand-interaction);
-}
-
-.active-link:not(.mobile-title):after {
+.nav-link:not(.mobile-title):after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -218,6 +214,20 @@ a {
   height: 4px;
   border-radius: 2px;
   background-color: currentColor;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.active-link {
+  position: relative;
+  color: var(--clr-brand-interaction);
+}
+
+.nav-link:hover:after,
+.active-link:not(.mobile-title):after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .header-address-list {
