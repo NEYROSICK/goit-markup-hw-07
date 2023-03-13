@@ -1132,7 +1132,7 @@ a {
 .modal-backdrop {
   visibility: hidden;
   opacity: 0;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   pointer-events: none;
   transform: scale(1.2);
   display: flex;
@@ -1161,6 +1161,7 @@ a {
   visibility: visible;
   pointer-events: all;
   transform: scale(1);
+  overflow-y: scroll;
 }
 
 .modal-open {
