@@ -358,7 +358,8 @@ a {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-close:hover,
@@ -366,6 +367,7 @@ a {
   background-color: var(--clr-brand-interaction);
   border-color: var(--clr-brand-interaction);
   fill: var(--clr-secondary-inverted);
+  transform: rotate(360deg);
 }
 
 .burger-menu-links {
@@ -451,7 +453,7 @@ a {
 
 .hero-section {
   width: 100vw;
-  background-color: var(--clr-background-primary-dark);
+  /* background-color: var(--clr-background-primary-dark); */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -460,7 +462,7 @@ a {
   background-repeat: no-repeat;
   background-position: -8px center;
   background-position: center;
-  background-size: cover;
+  background-size: 1440px;
   padding: 112px 0;
   text-align: center;
 }
@@ -634,7 +636,7 @@ a {
 }
 
 .team-container {
-  width: 265px;
+  width: 294px;
 }
 
 @media (min-width: 768px) {
@@ -1131,7 +1133,7 @@ a {
   opacity: 0;
   overflow-y: scroll;
   pointer-events: none;
-  transform: scale(1.5);
+  transform: scale(1.2);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1142,9 +1144,9 @@ a {
   height: 100vh;
   padding: 15px;
   background-color: var(--clr-modal-backdrop);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 @media (min-height: 614px) {
