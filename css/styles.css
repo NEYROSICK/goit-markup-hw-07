@@ -477,6 +477,7 @@ a {
   background-size: cover;
   padding: 112px 0;
   text-align: center;
+  background-attachment: fixed;
 }
 
 @media (min-device-pixel-ratio: 2),
